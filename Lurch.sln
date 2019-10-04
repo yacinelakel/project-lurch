@@ -3,17 +3,19 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29306.81
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lurch.Api", "Lurch.Api\Lurch.Api.csproj", "{892ECCF5-FAB5-4976-808F-C3508EF8CB11}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Lurch.Api", "Lurch.Api\Lurch.Api.csproj", "{892ECCF5-FAB5-4976-808F-C3508EF8CB11}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lurch.Karma.Core", "Lurch.Karma.Core\Lurch.Karma.Core.csproj", "{6CED1A70-9629-449A-87E9-F156A761688D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Lurch.Karma.Core", "Lurch.Karma.Core\Lurch.Karma.Core.csproj", "{6CED1A70-9629-449A-87E9-F156A761688D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lurch.Karma.Data", "Lurch.Karma.Data\Lurch.Karma.Data.csproj", "{EED4976D-24EB-454C-8DF7-BDA72E615B66}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Lurch.Karma.Data", "Lurch.Karma.Data\Lurch.Karma.Data.csproj", "{EED4976D-24EB-454C-8DF7-BDA72E615B66}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lurch.Karma.UnitTests", "Lurch.Karma.UnitTests\Lurch.Karma.UnitTests.csproj", "{AC97F0DF-DF23-436F-B70B-775650F3FDD9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Lurch.Karma.UnitTests", "Lurch.Karma.UnitTests\Lurch.Karma.UnitTests.csproj", "{AC97F0DF-DF23-436F-B70B-775650F3FDD9}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Lurch.Karma", "Lurch.Karma", "{F93130F9-6B09-443E-AD01-95904C288A62}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lurch.Karma.IntegrationTests", "Lurch.Karma.IntegrationTests\Lurch.Karma.IntegrationTests.csproj", "{22AF0BED-EBDD-4BB3-A530-AF7420DDDE76}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Lurch.Karma.IntegrationTests", "Lurch.Karma.IntegrationTests\Lurch.Karma.IntegrationTests.csproj", "{22AF0BED-EBDD-4BB3-A530-AF7420DDDE76}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lurch.Karma.Migrator", "Lurch.Karma.Migrator\Lurch.Karma.Migrator.csproj", "{56FFCE0B-32DA-4DBF-9E8E-81C2C0A5A69A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -41,6 +43,10 @@ Global
 		{22AF0BED-EBDD-4BB3-A530-AF7420DDDE76}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{22AF0BED-EBDD-4BB3-A530-AF7420DDDE76}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{22AF0BED-EBDD-4BB3-A530-AF7420DDDE76}.Release|Any CPU.Build.0 = Release|Any CPU
+		{56FFCE0B-32DA-4DBF-9E8E-81C2C0A5A69A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{56FFCE0B-32DA-4DBF-9E8E-81C2C0A5A69A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{56FFCE0B-32DA-4DBF-9E8E-81C2C0A5A69A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{56FFCE0B-32DA-4DBF-9E8E-81C2C0A5A69A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -50,6 +56,7 @@ Global
 		{EED4976D-24EB-454C-8DF7-BDA72E615B66} = {F93130F9-6B09-443E-AD01-95904C288A62}
 		{AC97F0DF-DF23-436F-B70B-775650F3FDD9} = {F93130F9-6B09-443E-AD01-95904C288A62}
 		{22AF0BED-EBDD-4BB3-A530-AF7420DDDE76} = {F93130F9-6B09-443E-AD01-95904C288A62}
+		{56FFCE0B-32DA-4DBF-9E8E-81C2C0A5A69A} = {F93130F9-6B09-443E-AD01-95904C288A62}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {15C304F6-5A38-4899-A557-D363A63E86C0}

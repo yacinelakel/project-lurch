@@ -1,41 +1,43 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Text;
+using System.Data;
+using System.Linq;
 using System.Threading.Tasks;
+using CSharpFunctionalExtensions;
+using Dapper;
 using Lurch.Karma.Core;
-using Microsoft.EntityFrameworkCore;
+using Lurch.Karma.Core.Repositories;
 
 namespace Lurch.Karma.Data
 {
-    public class UserRepository : IUserRepository
+    public class UserRepository : BaseRepository, IUserRepository
     {
-        private readonly KarmaContext _context;
-
-        public UserRepository(KarmaContext context)
+        public UserRepository(IDbTransaction transaction) : base(transaction)
         {
-            _context = context;
         }
 
-        public Task<List<User>> GetUsers()
+        public async Task<List<User>> GetUsers()
         {
-            return _context.Users.ToListAsync();
+            var sql = "select * from Users";
+            var result = await Connection.QueryAsync<UserDo>(sql, transaction: Transaction);
+            return result.Select(UserDo.ToModel).ToList();
         }
 
-        public Task<User> GetUser(int id)
+        public async Task<Maybe<User>> GetUser(int id)
         {
-            return _context.Users.SingleAsync(x => x.Id == id);
+            var sql = "select * from Users";
+            var result = await Connection.QueryFirstOrDefaultAsync<UserDo>(sql, transaction: Transaction);
+            return result == null ? Maybe<User>.None : Maybe<User>.From(UserDo.ToModel(result));
         }
 
-        public Task AddUser(User user)
+        public async Task<int> AddUser(User user)
         {
-            return _context.Users.AddAsync(user);
+            var userDo = UserDo.ToDo(user);
+            var sql = "insert into Users(KarmaAmount) output INSERTED.ID values(@KarmaAmount)";
+
+            var id = await Connection.QuerySingleAsync<int>(sql,userDo, transaction: Transaction);
+
+            return id;
         }
-    }
-
-    public interface IUserRepository
-    {
-        Task<List<User>> GetUsers();
-
-        Task<User> GetUser(int id);
     }
 }

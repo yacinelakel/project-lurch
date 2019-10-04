@@ -8,19 +8,19 @@ namespace Lurch.Karma.UnitTests.Core
     public class UserTests
     {
         [Fact]
-        public void Creating_a_new_user_has_0_karma()
+        public void Creating_a_new_user_with_a_karma_amount_sets_karma()
         {
-            var user = new User(0);
+            var user = User.Create( 30);
 
-            user.Karma.Amount.Should().Be(0);
+            user.Karma.Amount.Should().Be(30);
         }
 
         [Fact]
-        public void Creating_a_new_user_with_a_karma_amount_sets_karma()
+        public void Creating_a_new_user_with_no_karma_amount_sets_karma_to_zero()
         {
-            var user = new User(0, 30);
+            var user = User.Create();
 
-            user.Karma.Amount.Should().Be(30);
+            user.Karma.Amount.Should().Be(0);
         }
     }
 }

@@ -6,18 +6,13 @@ namespace Lurch.Karma.Core
 {
     public class User : Entity
     {
-        public User(int id)
+
+        public static User Create(int karmaAmount = 0)
         {
-            Id = id;
-            Karma = new Karma();
+            return new User(0, karmaAmount);
         }
 
-        // EF
-        protected User()
-        {
-        }
-
-        public User(int id, int karmaAmount)
+        public User(int id, int karmaAmount) : base(id)
         {
             Karma = new Karma(karmaAmount);
         }

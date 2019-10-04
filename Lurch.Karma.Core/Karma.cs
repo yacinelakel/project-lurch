@@ -49,5 +49,16 @@ namespace Lurch.Karma.Core
         {
             return right + left;
         }
+
+        public static bool operator ==(Karma left, Karma right)
+        {
+            return EqualOperator(left, right);
+        }
+
+
+        public static bool operator !=(Karma left, Karma right)
+        {
+            return !EqualOperator(left, right);
+        }
     }
 }

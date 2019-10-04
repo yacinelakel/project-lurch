@@ -7,16 +7,26 @@ namespace Lurch.Karma.Core
     {
         int? _requestedHashCode;
         int _Id;
-        public virtual int Id
+        public int Id
         {
             get
             {
                 return _Id;
             }
-            protected set
+            private set
             {
                 _Id = value;
             }
+        }
+
+        protected Entity()
+        {
+
+        }
+
+        protected Entity(int id)
+        {
+            Id = id;
         }
 
 

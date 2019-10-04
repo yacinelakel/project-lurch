@@ -15,6 +15,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Lurch.Karma.Data\Lurch.Karma.Data.csproj" />
+    <ProjectReference Include="..\Lurch.Karma.Migrator\Lurch.Karma.Migrator.csproj" />
   </ItemGroup>
 
 </Project>

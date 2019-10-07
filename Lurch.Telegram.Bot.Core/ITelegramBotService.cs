@@ -1,8 +1,8 @@
 ﻿using Telegram.Bot;
 
-namespace Lurch.Api.ApplicationServices.Common
+namespace Lurch.Telegram.Bot.Core
 {
-    public interface IBotService
+    public interface ITelegramBotService
     {
         TelegramBotClient Client { get; }
     }

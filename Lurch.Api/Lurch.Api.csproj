@@ -6,20 +6,13 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="HttpToSocks5Proxy" Version="1.2.1" />
     <PackageReference Include="Microsoft.AspNetCore.App" />
     <PackageReference Include="Microsoft.AspNetCore.Razor.Design" Version="2.2.0" PrivateAssets="All" />
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.2.3" />
-    <PackageReference Include="Telegram.Bot" Version="15.0.0" />
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Lurch.Karma.Core\Lurch.Karma.Core.csproj" />
-    <ProjectReference Include="..\Lurch.Karma.Data\Lurch.Karma.Data.csproj" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="ApplicationServices\Karma\" />
+    <ProjectReference Include="..\Lurch.Telegram.Bot.Core\Lurch.Telegram.Bot.Core.csproj" />
   </ItemGroup>
 
 </Project>

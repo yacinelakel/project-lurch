@@ -1,15 +1,17 @@
-﻿using Microsoft.Extensions.Options;
+﻿using System;
+using System.Threading.Tasks;
+using Microsoft.Extensions.Options;
 using MihaZupan;
 using Telegram.Bot;
 
-namespace Lurch.Api.ApplicationServices.Common
+namespace Lurch.Telegram.Bot.Core
 {
-    public class BotService : IBotService {
+    public class TelegramBotService : ITelegramBotService {
         public TelegramBotClient Client { get; }
 
-        public BotService(IOptions<BotConfiguration> config)
+        public TelegramBotService(IOptions<TelegramBotConfiguration> config)
         {
-            var config1 = config.Value;
+            var config1 = config?.Value ?? throw new ArgumentNullException(nameof(config));
             Client = string.IsNullOrWhiteSpace(config1.Socks5Host)
                 ? new TelegramBotClient(config1.BotToken)
                 : new TelegramBotClient(config1.BotToken,

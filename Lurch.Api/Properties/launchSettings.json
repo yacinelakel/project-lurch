@@ -14,6 +14,7 @@
       "launchBrowser": true,
       "launchUrl": "api/heartbeat",
       "environmentVariables": {
+        "TELEGRAM_BOT_TOKEN": "915774345:AAFmUkKeXh1KWr5Wr5bxWaiG4ZSsljRxXGg",
         "ASPNETCORE_ENVIRONMENT": "Development"
       }
     },

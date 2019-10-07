@@ -1,4 +1,5 @@
-﻿using Lurch.Api.ApplicationServices.Common;
+﻿using System;
+using Lurch.Telegram.Bot.Core;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
@@ -9,23 +10,21 @@ namespace Lurch.Api
 {
     public class Startup
     {
-        public Startup(IConfiguration configuration)
+        public Startup(IConfiguration configuration, IHostingEnvironment env)
         {
+            CurrentEnvironment = env;
             Configuration = configuration;
         }
 
-        public IConfiguration Configuration { get; }
+        private IConfiguration Configuration { get; }
+        private IHostingEnvironment CurrentEnvironment { get; }
 
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
 
-            services.AddScoped<IEchoService, EchoService>();
-            services.AddScoped<IParseUpdateMessageService, ParseUpdateMessageService>();
-            services.AddSingleton<IBotService, BotService>();
-
-            services.Configure<BotConfiguration>(Configuration.GetSection(BotConfiguration.Section));
+            services.AddTelegramBot(GetTelegramBotConfiguration());
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -40,5 +39,27 @@ namespace Lurch.Api
             app.UseHttpsRedirection();
             app.UseMvc();
         }
+
+        private TelegramBotConfiguration GetTelegramBotConfiguration()
+        {
+            const string telegramBotTokenEnvVarName = "TELEGRAM_BOT_TOKEN";
+            const string telegramConfigurationKey = "TelegramBotConfiguration";
+
+            if (!CurrentEnvironment.IsDevelopment())
+                return Configuration.GetSection(telegramConfigurationKey).Get<TelegramBotConfiguration>();
+
+
+            var botToken = Environment.GetEnvironmentVariable(telegramBotTokenEnvVarName);
+
+            if (string.IsNullOrEmpty(botToken))
+                throw new Exception("Cannot find token for telegram bot.");
+
+            var botConfigSection = Configuration.GetSection(telegramConfigurationKey).Get<TelegramBotConfiguration>();
+            botConfigSection.BotToken = botToken;
+            return botConfigSection;
+
+        }
+
+
     }
 }

@@ -7,9 +7,21 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Lurch.Api", "Lurch.Api\Lurc
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Lurch.Telegram.Bot", "Lurch.Telegram.Bot", "{272923E1-5466-4A51-A460-5E492A4FCC98}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lurch.Telegram.Bot.Core", "Lurch.Telegram.Bot.Core\Lurch.Telegram.Bot.Core.csproj", "{39F835F1-97D1-42A1-A6B8-3B10C02A5046}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Lurch.Telegram.Bot.Core", "Lurch.Telegram.Bot.Core\Lurch.Telegram.Bot.Core.csproj", "{39F835F1-97D1-42A1-A6B8-3B10C02A5046}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lurch.Telegram.Bot.UnitTests", "Lurch.Telegram.Bot.UnitTests\Lurch.Telegram.Bot.UnitTests.csproj", "{C532496D-DF1B-4DB2-9793-D524EFC4C2E8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Lurch.Telegram.Bot.UnitTests", "Lurch.Telegram.Bot.UnitTests\Lurch.Telegram.Bot.UnitTests.csproj", "{C532496D-DF1B-4DB2-9793-D524EFC4C2E8}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Lurch.Karma", "Lurch.Karma", "{552367A1-92C6-412C-8427-B282D150FD42}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Lurch.Karma.Core", "Lurch.Karma.Core\Lurch.Karma.Core.csproj", "{07276786-216D-43B7-8E5F-397E07241AE5}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Lurch.Karma.Data", "Lurch.Karma.Data\Lurch.Karma.Data.csproj", "{FEE37557-0D03-4B37-8D1D-65DD254C6F89}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Lurch.Karma.IntegrationTests", "Lurch.Karma.IntegrationTests\Lurch.Karma.IntegrationTests.csproj", "{CF3C8530-F3AD-4531-B08E-04A446852B06}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Lurch.Karma.UnitTests", "Lurch.Karma.UnitTests\Lurch.Karma.UnitTests.csproj", "{9C117DD6-70D1-47DA-854E-63BB28582571}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Lurch.Karma.Migrator", "Lurch.Karma.Migrator\Lurch.Karma.Migrator.csproj", "{9B67C850-F0EE-4A53-B5B2-6A3361E225DA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -29,6 +41,26 @@ Global
 		{C532496D-DF1B-4DB2-9793-D524EFC4C2E8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C532496D-DF1B-4DB2-9793-D524EFC4C2E8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C532496D-DF1B-4DB2-9793-D524EFC4C2E8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{07276786-216D-43B7-8E5F-397E07241AE5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{07276786-216D-43B7-8E5F-397E07241AE5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{07276786-216D-43B7-8E5F-397E07241AE5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{07276786-216D-43B7-8E5F-397E07241AE5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FEE37557-0D03-4B37-8D1D-65DD254C6F89}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FEE37557-0D03-4B37-8D1D-65DD254C6F89}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FEE37557-0D03-4B37-8D1D-65DD254C6F89}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FEE37557-0D03-4B37-8D1D-65DD254C6F89}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CF3C8530-F3AD-4531-B08E-04A446852B06}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CF3C8530-F3AD-4531-B08E-04A446852B06}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CF3C8530-F3AD-4531-B08E-04A446852B06}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CF3C8530-F3AD-4531-B08E-04A446852B06}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9C117DD6-70D1-47DA-854E-63BB28582571}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9C117DD6-70D1-47DA-854E-63BB28582571}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9C117DD6-70D1-47DA-854E-63BB28582571}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9C117DD6-70D1-47DA-854E-63BB28582571}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9B67C850-F0EE-4A53-B5B2-6A3361E225DA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9B67C850-F0EE-4A53-B5B2-6A3361E225DA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9B67C850-F0EE-4A53-B5B2-6A3361E225DA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9B67C850-F0EE-4A53-B5B2-6A3361E225DA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -36,6 +68,11 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{39F835F1-97D1-42A1-A6B8-3B10C02A5046} = {272923E1-5466-4A51-A460-5E492A4FCC98}
 		{C532496D-DF1B-4DB2-9793-D524EFC4C2E8} = {272923E1-5466-4A51-A460-5E492A4FCC98}
+		{07276786-216D-43B7-8E5F-397E07241AE5} = {552367A1-92C6-412C-8427-B282D150FD42}
+		{FEE37557-0D03-4B37-8D1D-65DD254C6F89} = {552367A1-92C6-412C-8427-B282D150FD42}
+		{CF3C8530-F3AD-4531-B08E-04A446852B06} = {552367A1-92C6-412C-8427-B282D150FD42}
+		{9C117DD6-70D1-47DA-854E-63BB28582571} = {552367A1-92C6-412C-8427-B282D150FD42}
+		{9B67C850-F0EE-4A53-B5B2-6A3361E225DA} = {552367A1-92C6-412C-8427-B282D150FD42}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {15C304F6-5A38-4899-A557-D363A63E86C0}

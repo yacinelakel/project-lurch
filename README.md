@@ -30,3 +30,5 @@ To bind a url to the telegram webhook, run the following:
 ```
 curl -F “url=https://<<NGROK_URL>>/<WEBHOOKLOCATION>" https://api.telegram.org/bot<YOURTOKEN>/setWebhook
 ```
+
+[(source)](https://core.telegram.org/bots/webhooks#how-do-i-set-a-webhook-for-either-type)

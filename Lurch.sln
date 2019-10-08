@@ -7,9 +7,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Lurch.Api", "Lurch.Api\Lurc
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Lurch.Telegram.Bot", "Lurch.Telegram.Bot", "{272923E1-5466-4A51-A460-5E492A4FCC98}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lurch.Telegram.Bot.Core", "Lurch.Telegram.Bot.Core\Lurch.Telegram.Bot.Core.csproj", "{39F835F1-97D1-42A1-A6B8-3B10C02A5046}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Lurch.Telegram.Bot.Core", "Lurch.Telegram.Bot.Core\Lurch.Telegram.Bot.Core.csproj", "{39F835F1-97D1-42A1-A6B8-3B10C02A5046}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lurch.Telegram.Bot.UnitTests", "Lurch.Telegram.Bot.UnitTests\Lurch.Telegram.Bot.UnitTests.csproj", "{C532496D-DF1B-4DB2-9793-D524EFC4C2E8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Lurch.Telegram.Bot.UnitTests", "Lurch.Telegram.Bot.UnitTests\Lurch.Telegram.Bot.UnitTests.csproj", "{C532496D-DF1B-4DB2-9793-D524EFC4C2E8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lurch.Api.UnitTests", "Lurch.Api.UnitTests\Lurch.Api.UnitTests.csproj", "{197DAF14-7F1B-41BD-96FE-DE7039A6DC23}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lurch.Api.IntegrationTests", "Lurch.Api.IntegrationTests\Lurch.Api.IntegrationTests.csproj", "{B3B1C6AE-2122-42EC-A9C3-95FC9BCBC173}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -29,6 +33,14 @@ Global
 		{C532496D-DF1B-4DB2-9793-D524EFC4C2E8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C532496D-DF1B-4DB2-9793-D524EFC4C2E8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C532496D-DF1B-4DB2-9793-D524EFC4C2E8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{197DAF14-7F1B-41BD-96FE-DE7039A6DC23}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{197DAF14-7F1B-41BD-96FE-DE7039A6DC23}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{197DAF14-7F1B-41BD-96FE-DE7039A6DC23}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{197DAF14-7F1B-41BD-96FE-DE7039A6DC23}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B3B1C6AE-2122-42EC-A9C3-95FC9BCBC173}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B3B1C6AE-2122-42EC-A9C3-95FC9BCBC173}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B3B1C6AE-2122-42EC-A9C3-95FC9BCBC173}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B3B1C6AE-2122-42EC-A9C3-95FC9BCBC173}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

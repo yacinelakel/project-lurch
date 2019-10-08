@@ -1,5 +1,4 @@
 ﻿using System;
-using Lurch.Telegram.Bot.Core;
 using Lurch.Telegram.Bot.Core.IoC;
 using Lurch.Telegram.Bot.Core.Services;
 using Microsoft.AspNetCore.Builder;
@@ -59,9 +58,6 @@ namespace Lurch.Api
             var botConfigSection = Configuration.GetSection(telegramConfigurationKey).Get<TelegramBotConfiguration>();
             botConfigSection.BotToken = botToken;
             return botConfigSection;
-
         }
-
-
     }
 }

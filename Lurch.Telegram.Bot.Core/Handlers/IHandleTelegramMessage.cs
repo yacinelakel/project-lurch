@@ -1,6 +1,6 @@
 ﻿using System.Threading.Tasks;
 
-namespace Lurch.Telegram.Bot.Core
+namespace Lurch.Telegram.Bot.Core.Handlers
 {
     public interface IHandleTelegramMessage
     {

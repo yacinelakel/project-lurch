@@ -1,4 +1,4 @@
-﻿namespace Lurch.Telegram.Bot.Core
+﻿namespace Lurch.Telegram.Bot.Core.Services
 {
     public class TelegramBotConfiguration
     {

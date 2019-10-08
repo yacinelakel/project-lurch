@@ -1,5 +1,7 @@
 ﻿using System;
 using Lurch.Telegram.Bot.Core;
+using Lurch.Telegram.Bot.Core.IoC;
+using Lurch.Telegram.Bot.Core.Services;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;

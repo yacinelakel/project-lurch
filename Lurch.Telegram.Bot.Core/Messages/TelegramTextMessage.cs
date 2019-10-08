@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using Telegram.Bot.Types;
 using Telegram.Bot.Types.Enums;
 
-namespace Lurch.Telegram.Bot.Core
+namespace Lurch.Telegram.Bot.Core.Messages
 {
     public class TelegramTextMessage
     {

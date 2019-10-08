@@ -1,10 +1,9 @@
 ﻿using System;
-using System.Threading.Tasks;
 using Microsoft.Extensions.Options;
 using MihaZupan;
 using Telegram.Bot;
 
-namespace Lurch.Telegram.Bot.Core
+namespace Lurch.Telegram.Bot.Core.Services
 {
     public class TelegramBotService : ITelegramBotService {
         public TelegramBotClient Client { get; }

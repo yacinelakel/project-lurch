@@ -1,10 +1,10 @@
 ﻿using System;
 using System.Threading.Tasks;
+using Lurch.Telegram.Bot.Core.Messages;
 using Microsoft.Extensions.Logging;
-using Telegram.Bot.Types;
 using Telegram.Bot.Types.Enums;
 
-namespace Lurch.Telegram.Bot.Core
+namespace Lurch.Telegram.Bot.Core.Handlers
 {
     public class TelegramMessageHandler : IHandleTelegramMessage
     {

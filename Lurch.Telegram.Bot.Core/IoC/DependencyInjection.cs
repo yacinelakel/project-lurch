@@ -1,7 +1,9 @@
-﻿using System;
+﻿using Lurch.Telegram.Bot.Core.Commands;
+using Lurch.Telegram.Bot.Core.Handlers;
+using Lurch.Telegram.Bot.Core.Services;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace Lurch.Telegram.Bot.Core
+namespace Lurch.Telegram.Bot.Core.IoC
 {
     public static class DependencyInjection
     {
@@ -14,9 +16,11 @@ namespace Lurch.Telegram.Bot.Core
                 options.Socks5Host = configuration.Socks5Host;
                 options.Socks5Port = configuration.Socks5Port;
             });
-            services.AddScoped<IHandleTelegramUpdate, TelegramUpdateHandler>();
-            services.AddScoped<IHandleTelegramMessage, TelegramMessageHandler>();
-            services.AddScoped<IHandleTelegramTextMessage, TelegramTextMessageHandler>();
+            services.AddTransient<IHandleTelegramUpdate, TelegramUpdateHandler>();
+            services.AddTransient<IHandleTelegramMessage, TelegramMessageHandler>();
+            services.AddTransient<IHandleTelegramTextMessage, TelegramTextMessageHandler>();
+
+            services.AddTransient<IExecuteTelegramCommand, EchoCommandExecutor>();
 
             return services;
         }

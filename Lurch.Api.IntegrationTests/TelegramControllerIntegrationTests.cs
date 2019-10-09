@@ -2,6 +2,7 @@ using System.Net.Http;
 using System.Threading.Tasks;
 using FluentAssertions;
 using Lurch.Telegram.Bot.Core;
+using Lurch.Telegram.Bot.Core.Messages;
 using Microsoft.AspNetCore.Http;
 using Xunit;
 

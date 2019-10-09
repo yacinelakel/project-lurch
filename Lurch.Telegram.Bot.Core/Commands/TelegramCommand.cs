@@ -7,7 +7,7 @@ namespace Lurch.Telegram.Bot.Core.Commands
 {
     public class TelegramCommand
     {
-        public string Command { get; private set; }
+        public string CommandName { get; private set; }
 
         public IReadOnlyList<string> Args { get; private set; }
 
@@ -33,7 +33,7 @@ namespace Lurch.Telegram.Bot.Core.Commands
             if (!match.Success) return;
 
             IsCommand = true;
-            Command = match.Groups[1].Value;
+            CommandName = match.Groups[1].Value;
             Rest = match.Groups[2].Value;
             Args = Rest.Trim().Split(new[]{ " " }, StringSplitOptions.RemoveEmptyEntries);
         }

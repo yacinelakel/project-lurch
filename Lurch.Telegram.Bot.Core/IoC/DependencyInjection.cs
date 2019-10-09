@@ -8,6 +8,7 @@ namespace Lurch.Telegram.Bot.Core.IoC
 {
     public static class DependencyInjection
     {
+        // TODO: This needs unit tests
         public static IServiceCollection AddTelegramBot(this IServiceCollection services, TelegramBotConfiguration configuration)
         {
             var config = configuration ?? throw new ArgumentNullException(nameof(configuration));

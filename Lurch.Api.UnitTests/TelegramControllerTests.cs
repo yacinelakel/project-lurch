@@ -4,6 +4,7 @@ using FluentAssertions;
 using Lurch.Api.Controllers;
 using Lurch.Telegram.Bot.Core;
 using Lurch.Telegram.Bot.Core.Handlers;
+using Lurch.Telegram.Bot.Core.Messages;
 using Microsoft.AspNetCore.Mvc;
 using Moq;
 using Xunit;

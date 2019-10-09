@@ -18,7 +18,7 @@ namespace Lurch.Telegram.Bot.Core.Commands
 
         public bool CanExecute(TelegramCommand command)
         {
-            return command.IsCommand && command.Command == Command && !string.IsNullOrWhiteSpace(command.Rest);
+            return command != null && command.IsCommand && command.CommandName == Command && !string.IsNullOrWhiteSpace(command.Rest);
         }
 
         public async Task ExecuteCommand(TelegramCommand command)

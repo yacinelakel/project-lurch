@@ -7,6 +7,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.App" />
     <PackageReference Include="FluentAssertions" Version="5.9.0" />
     <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.0.1" />
     <PackageReference Include="Moq" Version="4.13.0" />
@@ -15,7 +16,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Lurch.Telegram.Bot.Core\Lurch.Telegram.Bot.Core.csproj" />
+    <ProjectReference Include="..\Lurch.Api\Lurch.Api.csproj" />
   </ItemGroup>
 
 </Project>

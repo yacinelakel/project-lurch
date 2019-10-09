@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Threading.Tasks;
+using Lurch.Telegram.Bot.Core.Messages;
 using Lurch.Telegram.Bot.Core.Services;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
@@ -16,12 +17,12 @@ namespace Lurch.Telegram.Bot.Core.Handlers
         private readonly IHandleTelegramMessage _messageHandler;
 
         public TelegramUpdateHandler(ILogger<TelegramUpdateHandler> logger, IHandleTelegramMessage messageHandler,
-            ITelegramBotService botService, IOptions<TelegramBotConfiguration> configuration)
+            ITelegramBotService botService, IOptions<TelegramBotConfiguration> options)
         {
             _logger = logger;
             _messageHandler = messageHandler;
             _botService = botService;
-            _configuration = configuration.Value;
+            _configuration = options.Value;
         }
 
         public async Task HandleAsync(TelegramUpdate update)
@@ -39,7 +40,8 @@ namespace Lurch.Telegram.Bot.Core.Handlers
                             new ChatId(_configuration.ExceptionChatId), 
                             $"```\n{e}\n```", 
                             ParseMode.Markdown);
-                throw e;
+                else
+                    throw;
             }
         }
 

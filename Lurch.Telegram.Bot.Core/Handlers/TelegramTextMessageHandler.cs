@@ -10,12 +10,12 @@ namespace Lurch.Telegram.Bot.Core.Handlers
     public class TelegramTextMessageHandler : IHandleTelegramTextMessage
     {
         private readonly ILogger<TelegramTextMessageHandler> _logger;
-        private readonly IEnumerable<IExecuteTelegramCommand> _commandLookup;
+        private readonly IEnumerable<IExecuteTelegramCommand> _commandExecutors;
 
-        public TelegramTextMessageHandler(ILogger<TelegramTextMessageHandler> logger, IEnumerable<IExecuteTelegramCommand> commandLookup)
+        public TelegramTextMessageHandler(ILogger<TelegramTextMessageHandler> logger, IEnumerable<IExecuteTelegramCommand> commandExecutors)
         {
             _logger = logger;
-            _commandLookup = commandLookup;
+            _commandExecutors = commandExecutors;
         }
 
         public async Task HandleAsync(TelegramTextMessage textMessage)
@@ -29,20 +29,18 @@ namespace Lurch.Telegram.Bot.Core.Handlers
             await TryParseAsCommand(textMessage);
         }
 
-        private async Task<bool> TryParseAsCommand(TelegramTextMessage textMessage)
+        private async Task TryParseAsCommand(TelegramTextMessage textMessage)
         {
             var command = new TelegramCommand(textMessage);
 
-            if (!command.IsCommand) return false;
+            if (!command.IsCommand) return;
 
-            var applicableCommands = _commandLookup.Where(c => c.CanExecute(command));
+            var applicableExecutors = _commandExecutors.Where(c => c.CanExecute(command));
 
-            foreach (var commandExecutor in applicableCommands)
+            foreach (var commandExecutor in applicableExecutors)
             {
                 await commandExecutor.ExecuteCommand(command);
             }
-
-            return true;
         }
     }
 }
